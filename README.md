@@ -1,4 +1,4 @@
-# Patient Care Management
+# SalamatDoc - Patient Care Management
 
 A healthcare management web application centered on the patient-doctor relationship. The application provides role-specific interfaces for patients, doctors, and administrators, with features for patient records, prescriptions, appointments, daily medication/meal tracking, and notifications.
 
@@ -22,12 +22,6 @@ A healthcare management web application centered on the patient-doctor relations
 - Notifications
 - Firestore-backed CRUD operations
 - Firebase Authentication for account login
-
-## My Role
-
-**Team Lead / Lead Developer**
-
-Responsible for leading the team's development work and contributing to the implementation of the application's core functionality, including its React interface, Firebase integration, authentication, and patient/doctor workflows.
 
 ## Design & Documentation
 
