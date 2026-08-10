@@ -1,0 +1,77 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e4e4e4;
+  font-family: 'Abel', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+border-radius: 1rem;
+background-color: #ffffff;
+}
+
+
+h2 {
+color: #000000;
+font-weight: 600;
+}
+/* Navbar gradient */
+
+.navbar {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar-gradient {
+  background: linear-gradient(to right,
+    #1FB1C2 0%,
+    #1FB1C2 65%,
+    #FFECD2 75%,
+    #FFECD2 100%);
+}
+
+
+
+.form-control {
+border-radius: 0.5rem;
+transition: all 0.2s ease-in-out;
+}
+
+
+.form-control:focus {
+box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+border-color: #007bff;
+}
+
+
+.btn-primary {
+border-radius: 0.5rem;
+font-weight: 600;
+transition: background-color 0.2s ease;
+}
+
+
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+
+.text-center a {
+color: #6610f2;
+transition: color 0.2s ease;
+}
+
+
+.text-center a:hover {
+color: #0056b3;
+}
+
+
+@media (max-width: 576px) {
+.card {
+width: 90% !important;
+padding: 2rem 1rem;
+}
+
+}

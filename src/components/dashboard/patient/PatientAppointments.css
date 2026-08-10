@@ -1,0 +1,93 @@
+/* Container for the entire appointments page */
+.appointment-container {
+  background-color: #e4e4e4;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Centered main title */
+.appointment-container h1 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Appointment card styling */
+.appointment-card {
+  background: #ffffff;
+  padding: 40px 60px; /* wider box */
+  border-radius: 16px;
+  width: 90%; /* wider container */
+  max-width: 1000px; /* controls maximum width */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  animation: fadeInUp;
+  animation-duration: 0.45s;
+}
+
+/* Section headings centered */
+.appointment-card h2 {
+  color: #004d61;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+}
+
+/* Regular text left-aligned */
+.appointment-card p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 8px 0;
+}
+
+/* Divider between sections */
+.appointment-divider {
+  margin: 25px 0;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* Note section */
+.appointment-note {
+  margin-top: 25px;
+  font-style: italic;
+  color: #444;
+  text-align: left;
+  background: #dce8f4;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+/* Loading state */
+.appointment-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .appointment-card {
+    width: 95%;
+    padding: 25px 30px;
+  }
+
+  .appointment-card h2 {
+    font-size: 1.4rem;
+  }
+
+  .appointment-card p {
+    font-size: 1rem;
+  }
+}

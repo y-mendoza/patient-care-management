@@ -1,0 +1,107 @@
+.notifications-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #e4e4e4;
+  min-height: 100vh;
+}
+
+.notifications-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 900px;
+
+  animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+}
+
+.notifications-title {
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.no-notifications {
+  color: #777;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+.notifications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item.unread {
+  background-color: #f1f5f9; /* light gray for unread */
+}
+
+.notification-item.read {
+  background-color: #f9f9f9;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-message {
+  font-weight: 500;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.notification-timestamp {
+  display: block;
+  margin-top: 0.4rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+/* ─── Buttons ───────────────────────────────── */
+/* ─── Buttons ───────────────────────────────── */
+.mark-button {
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+/* Primary (Mark as Read) — Blue background, white text */
+.mark-read {
+  background-color: #0078d7;
+  color: #fff;
+}
+
+.mark-read:hover {
+  background-color: #005fa3; /* darker blue on hover */
+}
+
+/* Secondary (Mark as Unread) — White background, blue text */
+.mark-unread {
+  background-color: #fff;
+  color: #0078d7;
+  border: 1px solid #0078d7;
+}
+
+.mark-unread:hover {
+  background-color: #e6f0fa; /* light blue tint on hover */
+}

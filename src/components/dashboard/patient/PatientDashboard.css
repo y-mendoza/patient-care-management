@@ -1,0 +1,90 @@
+.patient-dashboard {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  width: 100%;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dashboard-card h2 {
+  color: #004d61;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.dashboard-card p,
+.dashboard-card li {
+  font-size: 1rem;
+  color: #333;
+}
+
+.week-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.week-grid {
+  display: flex;
+  gap: 0.5rem;
+  min-width: max-content;
+}
+
+.day-box {
+  min-width: 85px;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.status-bar {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.status-meal,
+.status-med {
+  flex: 1;
+  padding: 0.2rem 0.3rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+}
+
+.legend {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.legend-box {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 0.3rem;
+  border-radius: 3px;
+  vertical-align: middle;
+}

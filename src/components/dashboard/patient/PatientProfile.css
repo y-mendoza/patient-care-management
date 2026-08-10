@@ -1,0 +1,60 @@
+.profile-container {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-card {
+  max-width: 700px;
+  text-align: left;
+}
+
+.profile-section {
+  margin-bottom: 2rem;
+}
+
+.profile-section h2 {
+  border-bottom: 2px solid #cde4ff;
+  padding-bottom: 0.3rem;
+  color: #004080;
+}
+
+.change-password {
+  color: #0077cc;
+  cursor: pointer;
+}
+
+.change-password:hover {
+  text-decoration: underline;
+}
+
+/* ─── Reusable Dashboard Button Styles ─────────────────────────── */
+.dashboard-button-blue {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.dashboard-button-blue:hover {
+  background-color: #005fa3; /* darker blue */
+}
+
+/* Optional white/outlined version for secondary actions */
+.dashboard-button-white {
+  background-color: #fff;
+  color: #0078d7;
+  border: 1px solid #0078d7;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.dashboard-button-white:hover {
+  background-color: #e6f0fa;
+}

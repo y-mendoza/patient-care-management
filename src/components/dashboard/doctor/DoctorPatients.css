@@ -1,0 +1,103 @@
+.patients-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+}
+
+.patients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.patients-header input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+/* Table styling */
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th,
+.patients-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+/* Hover effect for headers and rows */
+.patients-table th {
+  cursor: pointer;
+  user-select: none;
+  position: relative; /* for sort arrow positioning */
+}
+
+.patients-table th:hover {
+  background-color: #f0f0f0;
+}
+
+.patients-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* Sort indicators */
+.patients-table th::after {
+  content: "";
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.patients-table th.sorted-asc::after {
+  content: " ▲";
+}
+
+.patients-table th.sorted-desc::after {
+  content: " ▼";
+}
+
+/* ─── Reusable Dashboard Button Styles ─────────────────────────── */
+.dashboard-button-blue {
+  background-color: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.dashboard-button-blue:hover {
+  background-color: #005fa3; /* darker blue */
+  transform: translateY(-2px);
+}
+
+/* Optional white/outlined version for secondary actions */
+.dashboard-button-white {
+  background-color: #fff;
+  color: #0078d7;
+  border: 1px solid #0078d7;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.dashboard-button-white:hover {
+  background-color: #e6f0fa;
+  transform: translateY(-2px);
+}

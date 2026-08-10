@@ -1,0 +1,105 @@
+/* Page background and centering */
+.dashboard-container {
+  background-color: #e4e4e4;
+  min-height: 107vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  gap: 30px;
+}
+
+.dashboard-row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+}
+
+/* Table styling */
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.appointment-table th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #888;
+}
+
+.appointment-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.appointment-table tr:hover {
+  background-color: #f5f5f5;
+  transform: none;
+}
+
+.loading {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Calendar Styling */
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  border-radius: 8px;
+  border: none;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+.react-calendar .highlight-appointment {
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Appointments list below calendar */
+.appointments-list {
+  margin-top: 1rem;
+  padding: 0.5rem 10px;
+  border-top: 1px solid #ddd;
+}
+
+.appointments-list h3 {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+}
+
+.appointments-list ul {
+  padding-left: 20px;
+}
+
+.appointments-list li {
+  margin-bottom: 4px;
+  font-size: 14px;
+}

@@ -1,0 +1,119 @@
+/* ─── Base Dashboard Layout ───────────────────── */
+.dashboard-container {
+  background-color: #e4e4e4;
+  min-height: 100vh; /* ensures grey fills entire screen */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ─── Reusable Card ───────────────────────────── */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ─── Section Styling ─────────────────────────── */
+.dashboard-section {
+  margin-bottom: 2rem;
+}
+
+/* Headers (each page can still override alignment or font-size) */
+.dashboard-title {
+  font-size: 2rem;
+  color: #002b5b;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-subtitle {
+  font-size: 1.3rem;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* ─── Buttons ─────────────────────────────────── */
+.primary-button {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.primary-button:hover {
+  background-color: #005fa3;
+}
+
+.secondary-button {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.secondary-button:hover {
+  background-color: #b3b3b3;
+}
+
+/* ─── Form Inputs ─────────────────────────────── */
+.input-field {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 4px rgba(0, 119, 204, 0.3);
+}
+
+/* ─── Divider & Error Messages ────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid #d1d1d1;
+  margin: 1.5rem 0;
+}
+
+.error-message {
+  color: #cc0000;
+  background: #ffe6e6;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ─── Utility Classes ─────────────────────────── */
+.text-bold {
+  font-weight: 600;
+}
+
+.text-blue {
+  color: #004080;
+}
+
+.text-muted {
+  color: #777;
+}
+
+.bg-light-blue {
+  background-color: #dce8f4;
+}
+
+.rounded {
+  border-radius: 8px;
+}

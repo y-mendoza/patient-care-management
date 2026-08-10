@@ -1,0 +1,68 @@
+rules_version = '2';
+
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ── USERS ────────────────────────────────
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // ── DOCTORS ─────────────────────────────
+    match /doctors/{doctorId} {
+      allow read:  if request.auth != null;            // anyone signed in can view
+      allow write: if request.auth != null && request.auth.uid == doctorId;
+    }
+
+    // ── PATIENTS ────────────────────────────
+    match /patients/{patientId} {
+      allow read: if request.auth != null &&
+        (request.auth.uid == patientId ||
+         exists(/databases/$(database)/documents/doctors/$(request.auth.uid)));
+      allow write: if request.auth != null && request.auth.uid == patientId;
+    }
+
+    // ── APPOINTMENTS ────────────────────────
+    match /appointments/{id} {
+      allow read, write: if request.auth != null &&
+        (resource.data.doctorId.path.split('/')[1] == request.auth.uid ||
+         resource.data.patientId.path.split('/')[1] == request.auth.uid);
+    }
+
+    // ── DAILY MEALS CHECKLIST ───────────────
+    match /dailyMealsChecklist/{id} {
+      allow read, write: if request.auth != null &&
+        (resource.data.doctor.path.split('/')[1] == request.auth.uid ||
+         resource.data.patient.path.split('/')[1] == request.auth.uid);
+    }
+
+    // ── DAILY INTAKE MONITOR ────────────────
+    match /dailyIntakeMonitor/{id} {
+      allow read, write: if request.auth != null &&
+        (resource.data.doctor.path.split('/')[1] == request.auth.uid ||
+         resource.data.patient.path.split('/')[1] == request.auth.uid);
+    }
+
+    // ── PRESCRIPTIONS ───────────────────────
+    match /prescriptions/{id} {
+      allow read, write: if request.auth != null &&
+        (resource.data.doctor.path.split('/')[1] == request.auth.uid ||
+         resource.data.patient.path.split('/')[1] == request.auth.uid);
+    }
+
+    // ── NOTIFICATIONS ───────────────────────
+    match /notifications/{id} {
+      // recipients can read and update read-status
+      allow read, update: if request.auth != null &&
+        resource.data.recipientId.path.split('/')[1] == request.auth.uid;
+      // cloud functions or any signed-in user may create
+      allow create: if request.auth != null;
+    }
+
+    // deny anything not matched above
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

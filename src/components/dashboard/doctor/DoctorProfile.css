@@ -1,0 +1,142 @@
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ---------- SIDEBAR ---------- */
+.logo {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.logo span {
+  color: #222;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  color: #fff;
+  background: #007bff;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.logout-btn {
+  border: none;
+  background: transparent;
+  color: #222;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  margin-top: auto;
+  transition: 0.2s;
+}
+
+.logout-btn:hover {
+  color: #d9534f;
+}
+
+/* ---------- MAIN PROFILE AREA ---------- */
+.profile-content {
+  flex: 1;
+  background: linear-gradient(to bottom, #fff, #c7e5f7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.profile-card {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 850px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+  text-align: left;
+
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.3s; /* don't forget to set a duration! */
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card h2,
+.profile-card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.profile-card hr {
+  margin: 15px 0 25px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/* ---------- INFO STYLING ---------- */
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 30px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333;
+  background: #f8f9fa;
+  padding: 10px 12px;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.profile-info p strong {
+  color: #007bff;
+}
+
+.profile-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-card a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar nav a {
+    font-size: 1rem;
+  }
+}

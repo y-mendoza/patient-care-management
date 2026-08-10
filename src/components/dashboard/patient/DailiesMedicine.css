@@ -1,0 +1,104 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 1000px;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+}
+
+.profile-card:hover {
+  transform: none; /* stays still — no "lift" on hover */
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* Section headers for "Upcoming" and "Taken" */
+.table-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 16px;
+  text-align: left;
+  border-left: 4px solid #0077cc;
+  padding-left: 10px;
+}
+
+/* Table styling */
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-table th {
+  background-color: #f0f0f0;
+  color: #444;
+  font-weight: 600;
+}
+
+.dashboard-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.dashboard-table tbody tr:hover {
+  background-color: #e4e4e4;
+}
+
+/* Status colors */
+.status {
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
+  display: inline-block;
+}
+
+.status.taken {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Loading and empty states */
+.loading,
+.empty-message {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
+}

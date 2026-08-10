@@ -1,0 +1,137 @@
+/* General shared layout for all pages */
+.page-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #212529;
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s; /* don't forget to set a duration! */
+}
+
+/* Semi-transparent overlay */
+.page-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+}
+
+/* Default page container */
+.page-container {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+  max-width: 700px;
+  width: 90%;
+  
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+}
+
+/* 🔹 Slimmer container specifically for the login page */
+.login-container {
+  max-width: 420px; /* thinner */
+  padding: 2.5rem 2rem; /* slightly tighter padding */
+}
+
+/* Heading styling */
+.page-title {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #007bff;
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+.page-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.page-section hr {
+  margin: 2rem auto;
+  width: 50%;
+  border-top: 2px solid #ddd;
+}
+
+/* Prevents flashbangs when first opening a page */
+.bg-animation {
+  background-color: rgb(165, 165, 165);
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* LOGIN PAGE
+
+/* Full-page background */
+.login-page {
+  position: relative;
+  min-height: 100vh;
+  background: url("../login.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.5s; /* don't forget to set a duration! */
+}
+
+/* Semi-transparent white overlay */
+.login-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 0;
+}
+
+/* Login content wrapper */
+.login-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 0.45s; /* don't forget to set a duration! */
+
+}
+
+/* Login box styling */
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 350px; /* thinner box */
+  text-align: center;
+  ;
+}

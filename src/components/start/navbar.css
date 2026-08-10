@@ -1,0 +1,64 @@
+/* Keep gradient background */
+.navbar-gradient {
+  background: linear-gradient(to right, #0093E9, #80D0C7);
+}
+
+/* Limit the right section width */
+.navbar .navbar-collapse {
+  flex-grow: 0;
+  width: auto;
+}
+
+/* Tighter spacing for right-side links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Smaller nav links */
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #004d61 !important;
+}
+
+/* Dropdown menu: make it slimmer and aligned */
+.dropdown-menu {
+  min-width: 130px;               /* narrower menu */
+  padding: 0.25rem 0;             /* less vertical padding */
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown items: smaller padding + font */
+.dropdown-item {
+  font-size: 0.95rem;
+  padding: 0.4rem 0.75rem;        /* thinner items */
+}
+
+/* Dropdown hover */
+.dropdown-item:hover {
+  background-color: rgba(0, 147, 233, 0.1);
+}
+
+/* Align container better on large screens */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    max-width: 80%;
+  }
+}
+
+/* Prevent items from stretching */
+.nav-item {
+  flex: 0 0 auto;
+}
